@@ -1,6 +1,6 @@
 #region snippet_all
-using ContosoUniversity.Data;
-using ContosoUniversity.Models;
+using GeoProfs.Data;
+using GeoProfs.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -8,11 +8,11 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Pages.Instructors
+namespace GeoProfs.Pages.Instructors
 {
     public class CreateModel : InstructorCoursesPageModel
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        private readonly GeoProfs.Data.SchoolContext _context;
         private readonly ILogger<InstructorCoursesPageModel> _logger;
 
         public CreateModel(SchoolContext context,

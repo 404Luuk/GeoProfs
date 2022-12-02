@@ -1,12 +1,12 @@
-﻿using ContosoUniversity.Data;
-using ContosoUniversity.Models;
+﻿using GeoProfs.Data;
+using GeoProfs.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Pages.Departments
+namespace GeoProfs.Pages.Departments
 {
     public class CreateModel : PageModel
     {

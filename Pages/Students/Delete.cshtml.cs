@@ -1,4 +1,4 @@
-﻿using ContosoUniversity.Models;
+﻿using GeoProfs.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -6,14 +6,14 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Pages.Students
+namespace GeoProfs.Pages.Students
 {
     public class DeleteModel : PageModel
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        private readonly GeoProfs.Data.SchoolContext _context;
         private readonly ILogger<DeleteModel> _logger;
 
-        public DeleteModel(ContosoUniversity.Data.SchoolContext context,
+        public DeleteModel(GeoProfs.Data.SchoolContext context,
                            ILogger<DeleteModel> logger)
         {
             _context = context;

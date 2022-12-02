@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using ContosoUniversity.Data;
-using ContosoUniversity.Models;
+using GeoProfs.Data;
+using GeoProfs.Models;
 
-namespace ContosoUniversity.Pages.Departments
+namespace GeoProfs.Pages.Departments
 {
     public class IndexModel : PageModel
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        private readonly GeoProfs.Data.SchoolContext _context;
 
-        public IndexModel(ContosoUniversity.Data.SchoolContext context)
+        public IndexModel(GeoProfs.Data.SchoolContext context)
         {
             _context = context;
         }

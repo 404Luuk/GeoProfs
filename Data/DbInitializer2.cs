@@ -1,11 +1,11 @@
 ﻿//#if !SQLiteVersion  // This seems to work for both SQLite and SQL Server. No GUID need for ConcurrencyToken
 #region snippet
-using ContosoUniversity.Models;
+using GeoProfs.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ContosoUniversity.Data
+namespace GeoProfs.Data
 {
     public static class DbInitializer
     {

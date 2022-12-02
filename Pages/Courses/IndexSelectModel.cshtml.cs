@@ -1,17 +1,17 @@
-using ContosoUniversity.Models.SchoolViewModels;
+using GeoProfs.Models.SchoolViewModels;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Pages.Courses
+namespace GeoProfs.Pages.Courses
 {
     public class IndexSelectModel : PageModel
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        private readonly GeoProfs.Data.SchoolContext _context;
 
-        public IndexSelectModel(ContosoUniversity.Data.SchoolContext context)
+        public IndexSelectModel(GeoProfs.Data.SchoolContext context)
         {
             _context = context;
         }

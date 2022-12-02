@@ -1,10 +1,10 @@
 ﻿#if FIRST  // First DbInitializer used
 #region snippet
-using ContosoUniversity.Models;
+using GeoProfs.Models;
 using System;
 using System.Linq;
 
-namespace ContosoUniversity.Data
+namespace GeoProfs.Data
 {
     public static class DbInitializer
     {

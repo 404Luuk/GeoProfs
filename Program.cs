@@ -1,11 +1,11 @@
-using ContosoUniversity.Data;
+using GeoProfs.Data;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
 
-namespace ContosoUniversity
+namespace GeoProfs
 {
     public class Program
     {

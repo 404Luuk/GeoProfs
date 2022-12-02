@@ -1,19 +1,19 @@
 #region snippet_all
-using ContosoUniversity.Models;
-using ContosoUniversity.Models.SchoolViewModels;  // Add VM
+using GeoProfs.Models;
+using GeoProfs.Models.SchoolViewModels;  // Add VM
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Pages.Instructors
+namespace GeoProfs.Pages.Instructors
 {
     public class IndexModel : PageModel
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        private readonly GeoProfs.Data.SchoolContext _context;
 
-        public IndexModel(ContosoUniversity.Data.SchoolContext context)
+        public IndexModel(GeoProfs.Data.SchoolContext context)
         {
             _context = context;
         }

@@ -1,6 +1,6 @@
 ﻿#region snippet_All
-using ContosoUniversity.Data;
-using ContosoUniversity.Models;
+using GeoProfs.Data;
+using GeoProfs.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -8,7 +8,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Pages.Students
+namespace GeoProfs.Pages.Students
 {
     public class IndexModel : PageModel
     {

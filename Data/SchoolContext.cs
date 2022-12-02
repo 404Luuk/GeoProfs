@@ -1,8 +1,8 @@
 ﻿#if SQLiteVersion
-using ContosoUniversity.Models;
+using GeoProfs.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ContosoUniversity.Data
+namespace GeoProfs.Data
 {
     #region snippet_SQLite
     public class SchoolContext : DbContext
@@ -34,10 +34,10 @@ namespace ContosoUniversity.Data
 }
 #else
 #region snippet_SS
-using ContosoUniversity.Models;
+using GeoProfs.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ContosoUniversity.Data
+namespace GeoProfs.Data
 {
     public class SchoolContext : DbContext
     {

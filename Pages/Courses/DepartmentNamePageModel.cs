@@ -1,10 +1,10 @@
-using ContosoUniversity.Data;
+using GeoProfs.Data;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
-namespace ContosoUniversity.Pages.Courses
+namespace GeoProfs.Pages.Courses
 {
     public class DepartmentNamePageModel : PageModel
     {

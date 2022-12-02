@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ContosoUniversity.ViewModels
+namespace GeoProfs.ViewModels
 {
     #region snippet
     public class StudentVM

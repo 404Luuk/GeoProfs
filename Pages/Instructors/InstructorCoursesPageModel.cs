@@ -1,12 +1,12 @@
 #region snippet_All
-using ContosoUniversity.Data;
-using ContosoUniversity.Models;
-using ContosoUniversity.Models.SchoolViewModels;
+using GeoProfs.Data;
+using GeoProfs.Models;
+using GeoProfs.Models.SchoolViewModels;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ContosoUniversity.Pages.Instructors
+namespace GeoProfs.Pages.Instructors
 {
     public class InstructorCoursesPageModel : PageModel
     {

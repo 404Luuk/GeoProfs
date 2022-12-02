@@ -2,7 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ContosoUniversity.Migrations
+namespace GeoProfs.Migrations
 {
     public partial class RowVersion : Migration
     {

@@ -1,4 +1,4 @@
-using ContosoUniversity.Data;
+using GeoProfs.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 
-namespace ContosoUniversity
+namespace GeoProfs
 {
     public class StartupMaxMBsize
     {

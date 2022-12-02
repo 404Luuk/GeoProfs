@@ -1,14 +1,14 @@
-using ContosoUniversity.Models;
+using GeoProfs.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Pages.Courses
+namespace GeoProfs.Pages.Courses
 {
     public class CreateModel : DepartmentNamePageModel
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        private readonly GeoProfs.Data.SchoolContext _context;
 
-        public CreateModel(ContosoUniversity.Data.SchoolContext context)
+        public CreateModel(GeoProfs.Data.SchoolContext context)
         {
             _context = context;
         }

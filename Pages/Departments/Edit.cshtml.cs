@@ -1,7 +1,7 @@
 #if SQLiteVersion
 #region snippet_All
-using ContosoUniversity.Data;
-using ContosoUniversity.Models;
+using GeoProfs.Data;
+using GeoProfs.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -10,14 +10,14 @@ using System;                // For GUID in SQLite version
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Pages.Departments
+namespace GeoProfs.Pages.Departments
 {
     #region snippet_mb_ss
     public class EditModel : PageModel
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        private readonly GeoProfs.Data.SchoolContext _context;
 
-        public EditModel(ContosoUniversity.Data.SchoolContext context)
+        public EditModel(GeoProfs.Data.SchoolContext context)
         {
             _context = context;
         }
@@ -166,8 +166,8 @@ namespace ContosoUniversity.Pages.Departments
 #endregion
 #else
 #region snippet_All_ss
-using ContosoUniversity.Data;
-using ContosoUniversity.Models;
+using GeoProfs.Data;
+using GeoProfs.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -175,14 +175,14 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Pages.Departments
+namespace GeoProfs.Pages.Departments
 {
 #region snippet_mb
     public class EditModel : PageModel
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        private readonly GeoProfs.Data.SchoolContext _context;
 
-        public EditModel(ContosoUniversity.Data.SchoolContext context)
+        public EditModel(GeoProfs.Data.SchoolContext context)
         {
             _context = context;
         }

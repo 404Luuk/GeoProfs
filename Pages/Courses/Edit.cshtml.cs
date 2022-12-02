@@ -1,15 +1,15 @@
-using ContosoUniversity.Models;
+using GeoProfs.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Pages.Courses
+namespace GeoProfs.Pages.Courses
 {
     public class EditModel : DepartmentNamePageModel
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        private readonly GeoProfs.Data.SchoolContext _context;
 
-        public EditModel(ContosoUniversity.Data.SchoolContext context)
+        public EditModel(GeoProfs.Data.SchoolContext context)
         {
             _context = context;
         }

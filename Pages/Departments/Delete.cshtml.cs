@@ -1,16 +1,16 @@
-using ContosoUniversity.Models;
+using GeoProfs.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Pages.Departments
+namespace GeoProfs.Pages.Departments
 {
     public class DeleteModel : PageModel
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        private readonly GeoProfs.Data.SchoolContext _context;
 
-        public DeleteModel(ContosoUniversity.Data.SchoolContext context)
+        public DeleteModel(GeoProfs.Data.SchoolContext context)
         {
             _context = context;
         }

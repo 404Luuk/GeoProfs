@@ -1,11 +1,11 @@
 ﻿#if Never // I don't think we need ConcurrencyToken = Guid.NewGuid() in SQLiteVersion
 #region snippet
-using ContosoUniversity.Models;
+using GeoProfs.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ContosoUniversity.Data
+namespace GeoProfs.Data
 {
     public static class DbInitializer
     {

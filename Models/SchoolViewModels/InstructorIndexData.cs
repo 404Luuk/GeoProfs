@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Models.SchoolViewModels
+namespace GeoProfs.Models.SchoolViewModels
 {
     public class InstructorIndexData
     {

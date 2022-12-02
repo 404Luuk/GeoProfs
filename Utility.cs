@@ -3,7 +3,7 @@
 #region snippet_sl
 using System;
 
-namespace ContosoUniversity
+namespace GeoProfs
 {
     public static class Utility
     {
@@ -17,7 +17,7 @@ namespace ContosoUniversity
 #endregion
 #else
 #region snippet
-namespace ContosoUniversity
+namespace GeoProfs
 {
     public static class Utility
     {

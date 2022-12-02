@@ -1,5 +1,5 @@
 #region snippet_All
-using ContosoUniversity.Models;
+using GeoProfs.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -7,13 +7,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Pages.Instructors
+namespace GeoProfs.Pages.Instructors
 {
     public class EditModel : InstructorCoursesPageModel
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        private readonly GeoProfs.Data.SchoolContext _context;
 
-        public EditModel(ContosoUniversity.Data.SchoolContext context)
+        public EditModel(GeoProfs.Data.SchoolContext context)
         {
             _context = context;
         }

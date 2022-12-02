@@ -1,17 +1,17 @@
-﻿using ContosoUniversity.Models;
-using ContosoUniversity.ViewModels;
+﻿using GeoProfs.Models;
+using GeoProfs.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System;
 using System.Threading.Tasks;
 
-namespace ContosoUniversity.Pages.Students
+namespace GeoProfs.Pages.Students
 {
     public class CreateVMModel : PageModel
     {
-        private readonly ContosoUniversity.Data.SchoolContext _context;
+        private readonly GeoProfs.Data.SchoolContext _context;
 
-        public CreateVMModel(ContosoUniversity.Data.SchoolContext context)
+        public CreateVMModel(GeoProfs.Data.SchoolContext context)
         {
             _context = context;
         }

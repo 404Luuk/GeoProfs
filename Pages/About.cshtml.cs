@@ -1,13 +1,13 @@
-﻿using ContosoUniversity.Models.SchoolViewModels;
-using ContosoUniversity.Data;
+﻿using GeoProfs.Models.SchoolViewModels;
+using GeoProfs.Data;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ContosoUniversity.Models;
+using GeoProfs.Models;
 
-namespace ContosoUniversity.Pages
+namespace GeoProfs.Pages
 {
     public class AboutModel : PageModel
     {

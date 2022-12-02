@@ -2,14 +2,14 @@
 #if !SQLiteVersion
 
 using System;
-using ContosoUniversity.Data;
+using GeoProfs.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace ContosoUniversity.Migrations
+namespace GeoProfs.Migrations
 {
     [DbContext(typeof(SchoolContext))]
     [Migration("20210318003031_InitialCreate")]
@@ -23,7 +23,7 @@ namespace ContosoUniversity.Migrations
                 .HasAnnotation("ProductVersion", "5.0.3")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("ContosoUniversity.Models.Course", b =>
+            modelBuilder.Entity("GeoProfs.Models.Course", b =>
                 {
                     b.Property<int>("CourseID")
                         .HasColumnType("int");
@@ -45,7 +45,7 @@ namespace ContosoUniversity.Migrations
                     b.ToTable("Course");
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.Department", b =>
+            modelBuilder.Entity("GeoProfs.Models.Department", b =>
                 {
                     b.Property<int>("DepartmentID")
                         .ValueGeneratedOnAdd()
@@ -72,7 +72,7 @@ namespace ContosoUniversity.Migrations
                     b.ToTable("Departments");
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.Enrollment", b =>
+            modelBuilder.Entity("GeoProfs.Models.Enrollment", b =>
                 {
                     b.Property<int>("EnrollmentID")
                         .ValueGeneratedOnAdd()
@@ -97,7 +97,7 @@ namespace ContosoUniversity.Migrations
                     b.ToTable("Enrollments");
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.Instructor", b =>
+            modelBuilder.Entity("GeoProfs.Models.Instructor", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -123,7 +123,7 @@ namespace ContosoUniversity.Migrations
                     b.ToTable("Instructor");
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.OfficeAssignment", b =>
+            modelBuilder.Entity("GeoProfs.Models.OfficeAssignment", b =>
                 {
                     b.Property<int>("InstructorID")
                         .HasColumnType("int");
@@ -137,7 +137,7 @@ namespace ContosoUniversity.Migrations
                     b.ToTable("OfficeAssignments");
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.Student", b =>
+            modelBuilder.Entity("GeoProfs.Models.Student", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -178,9 +178,9 @@ namespace ContosoUniversity.Migrations
                     b.ToTable("CourseInstructor");
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.Course", b =>
+            modelBuilder.Entity("GeoProfs.Models.Course", b =>
                 {
-                    b.HasOne("ContosoUniversity.Models.Department", "Department")
+                    b.HasOne("GeoProfs.Models.Department", "Department")
                         .WithMany("Courses")
                         .HasForeignKey("DepartmentID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -189,24 +189,24 @@ namespace ContosoUniversity.Migrations
                     b.Navigation("Department");
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.Department", b =>
+            modelBuilder.Entity("GeoProfs.Models.Department", b =>
                 {
-                    b.HasOne("ContosoUniversity.Models.Instructor", "Administrator")
+                    b.HasOne("GeoProfs.Models.Instructor", "Administrator")
                         .WithMany()
                         .HasForeignKey("InstructorID");
 
                     b.Navigation("Administrator");
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.Enrollment", b =>
+            modelBuilder.Entity("GeoProfs.Models.Enrollment", b =>
                 {
-                    b.HasOne("ContosoUniversity.Models.Course", "Course")
+                    b.HasOne("GeoProfs.Models.Course", "Course")
                         .WithMany("Enrollments")
                         .HasForeignKey("CourseID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ContosoUniversity.Models.Student", "Student")
+                    b.HasOne("GeoProfs.Models.Student", "Student")
                         .WithMany("Enrollments")
                         .HasForeignKey("StudentID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -217,11 +217,11 @@ namespace ContosoUniversity.Migrations
                     b.Navigation("Student");
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.OfficeAssignment", b =>
+            modelBuilder.Entity("GeoProfs.Models.OfficeAssignment", b =>
                 {
-                    b.HasOne("ContosoUniversity.Models.Instructor", "Instructor")
+                    b.HasOne("GeoProfs.Models.Instructor", "Instructor")
                         .WithOne("OfficeAssignment")
-                        .HasForeignKey("ContosoUniversity.Models.OfficeAssignment", "InstructorID")
+                        .HasForeignKey("GeoProfs.Models.OfficeAssignment", "InstructorID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -230,35 +230,35 @@ namespace ContosoUniversity.Migrations
 
             modelBuilder.Entity("CourseInstructor", b =>
                 {
-                    b.HasOne("ContosoUniversity.Models.Course", null)
+                    b.HasOne("GeoProfs.Models.Course", null)
                         .WithMany()
                         .HasForeignKey("CoursesCourseID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ContosoUniversity.Models.Instructor", null)
+                    b.HasOne("GeoProfs.Models.Instructor", null)
                         .WithMany()
                         .HasForeignKey("InstructorsID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.Course", b =>
+            modelBuilder.Entity("GeoProfs.Models.Course", b =>
                 {
                     b.Navigation("Enrollments");
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.Department", b =>
+            modelBuilder.Entity("GeoProfs.Models.Department", b =>
                 {
                     b.Navigation("Courses");
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.Instructor", b =>
+            modelBuilder.Entity("GeoProfs.Models.Instructor", b =>
                 {
                     b.Navigation("OfficeAssignment");
                 });
 
-            modelBuilder.Entity("ContosoUniversity.Models.Student", b =>
+            modelBuilder.Entity("GeoProfs.Models.Student", b =>
                 {
                     b.Navigation("Enrollments");
                 });
