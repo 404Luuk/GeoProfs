@@ -61,26 +61,7 @@ namespace GeoProfs.Pages.Instructors
                 {
                     _logger.LogWarning("Course {course} not found", course);
                 }
-            }
-
-            try
-            {
-                if (await TryUpdateModelAsync<Instructor>(
-                                newInstructor,
-                                "Instructor",
-                                i => i.FirstMidName, i => i.LastName,
-                                i => i.HireDate, i => i.OfficeAssignment))
-                {
-                    _context.Instructors.Add(newInstructor);
-                    await _context.SaveChangesAsync();
-                    return RedirectToPage("./Index");
-                }
-                return RedirectToPage("./Index");
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex.Message);
-            }
+            }          
 
             PopulateAssignedCourseData(_context, newInstructor);
             return Page();
