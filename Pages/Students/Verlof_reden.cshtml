@@ -1,0 +1,49 @@
+﻿@page
+@model GeoProfs.Pages.Students.Verlof_redenModel
+
+@{
+    ViewData["Title"] = "Verlof Reden";
+}
+
+<h1>Verlof Reden</h1>
+
+<h4>Ingelogd als: ...</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Verlof_reden.LastName" class="control-label"></label>
+                <input asp-for="Verlof_reden.LastName" class="form-control" />
+                <span asp-validation-for="Verlof_reden.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Verlof_reden.FirstMidName" class="control-label"></label>
+                <input asp-for="Verlof_reden.FirstMidName" class="form-control" />
+                <span asp-validation-for="Verlof_reden.FirstMidName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Verlof_reden.StartDate" class="control-label"></label>
+                <input asp-for="Verlof_reden.StartDate" class="form-control" />
+                <span asp-validation-for="Verlof_reden.StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Verlof_reden.EndDate" class="control-label"></label>
+                <input asp-for="Verlof_reden.EndDate" class="form-control" />
+                <span asp-validation-for="Verlof_reden.EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

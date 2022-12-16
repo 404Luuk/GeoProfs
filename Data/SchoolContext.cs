@@ -35,6 +35,7 @@ namespace GeoProfs.Data
 #else
 #region snippet_SS
 using GeoProfs.Models;
+using GeoProfs.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace GeoProfs.Data
@@ -48,6 +49,7 @@ namespace GeoProfs.Data
         public DbSet<Course> Courses { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<Verlof_reden> Verlof_redens { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Instructor> Instructors { get; set; }
 
