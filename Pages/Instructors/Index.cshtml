@@ -40,12 +40,6 @@
                     @Html.DisplayFor(modelItem => item.HireDate)
                 </td>
                 <td>
-                    @if (item.OfficeAssignment != null)
-                    {
-                        @item.OfficeAssignment.Location
-                    }
-                </td>
-                <td>
                     @{
                         foreach (var course in item.Courses)
                         {

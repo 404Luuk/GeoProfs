@@ -26,8 +26,7 @@ namespace GeoProfs.Pages.Instructors
         {
             #region snippet_query
             InstructorData = new InstructorIndexData();
-            InstructorData.Instructors = await _context.Instructors
-                .Include(i => i.OfficeAssignment)                 
+            InstructorData.Instructors = await _context.Instructors               
                 .Include(i => i.Courses)
                     .ThenInclude(c => c.Department)
                 .OrderBy(i => i.LastName)

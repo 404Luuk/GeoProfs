@@ -106,30 +106,8 @@ namespace GeoProfs.Data
                 FirstMidName = "Roger",
                 LastName = "Zheng",
                 HireDate = DateTime.Parse("2004-02-12")
-            };
-
-            var officeAssignments = new OfficeAssignment[]
-            {
-                new OfficeAssignment {
-                    Instructor = fakhouri,
-                    Location = "Smith 17" },
-                new OfficeAssignment {
-                    Instructor = harui,
-                    Location = "Gowan 27" },
-                new OfficeAssignment {
-                    Instructor = kapoor,
-                    Location = "Thompson 304" },
-            };
-
-            context.AddRange(officeAssignments);
-
-            var english = new Department
-            {
-                Name = "English",
-                Budget = 350000,
-                StartDate = DateTime.Parse("2007-09-01"),
-                Administrator = abercrombie
-            };
+            };     
+            
 
             var mathematics = new Department
             {
@@ -205,7 +183,6 @@ namespace GeoProfs.Data
                 CourseID = 2021,
                 Title = "Composition",
                 Credits = 3,
-                Department = english,
                 Instructors = new List<Instructor> { abercrombie }
             };
      
@@ -214,7 +191,6 @@ namespace GeoProfs.Data
                 CourseID = 2042,
                 Title = "Literature",
                 Credits = 4,
-                Department = english,
                 Instructors = new List<Instructor> { abercrombie }
             };
 
