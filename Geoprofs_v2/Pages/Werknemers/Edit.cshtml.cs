@@ -30,7 +30,7 @@ namespace Geoprofs_v2.Pages.Werknemers
                 return NotFound();
             }
 
-            Werknemer = await _context.Werknemers.FirstOrDefaultAsync(m => m.werknemer_id == id);
+            Werknemer = await _context.Werknemers.FirstOrDefaultAsync(m => m.id == id);
 
             if (Werknemer == null)
             {
@@ -56,7 +56,7 @@ namespace Geoprofs_v2.Pages.Werknemers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!WerknemerExists(Werknemer.werknemer_id))
+                if (!WerknemerExists(Werknemer.id))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace Geoprofs_v2.Pages.Werknemers
 
         private bool WerknemerExists(int id)
         {
-            return _context.Werknemers.Any(e => e.werknemer_id == id);
+            return _context.Werknemers.Any(e => e.id == id);
         }
     }
 }

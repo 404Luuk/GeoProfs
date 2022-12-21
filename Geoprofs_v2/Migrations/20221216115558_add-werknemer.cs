@@ -10,12 +10,12 @@ namespace Geoprofs_v2.Migrations
                 name: "Werknemers",
                 columns: table => new
                 {
-                    werknemer_id = table.Column<int>(type: "INTEGER", nullable: false)
+                    id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Werknemers", x => x.werknemer_id);
+                    table.PrimaryKey("PK_Werknemers", x => x.id);
                 });
         }
 

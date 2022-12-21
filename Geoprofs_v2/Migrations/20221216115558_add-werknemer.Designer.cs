@@ -19,11 +19,11 @@ namespace Geoprofs_v2.Migrations
 
             modelBuilder.Entity("Geoprofs_v2.Models.Werknemer", b =>
                 {
-                    b.Property<int>("werknemer_id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("werknemer_id");
+                    b.HasKey("id");
 
                     b.ToTable("Werknemers");
                 });

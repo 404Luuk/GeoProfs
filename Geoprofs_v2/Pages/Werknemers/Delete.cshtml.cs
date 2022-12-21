@@ -29,7 +29,7 @@ namespace Geoprofs_v2.Pages.Werknemers
                 return NotFound();
             }
 
-            Werknemer = await _context.Werknemers.FirstOrDefaultAsync(m => m.werknemer_id == id);
+            Werknemer = await _context.Werknemers.FirstOrDefaultAsync(m => m.id == id);
 
             if (Werknemer == null)
             {
