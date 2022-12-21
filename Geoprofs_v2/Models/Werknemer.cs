@@ -14,6 +14,7 @@ namespace Geoprofs_v2.Models
         [Display(Name ="Email")]
         public string email { get; set; }
 
+
         // Department foreign key
         [ForeignKey("Department")]
         public int departmentId { get; set; }
