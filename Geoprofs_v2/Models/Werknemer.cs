@@ -12,5 +12,7 @@ namespace Geoprofs_v2.Models
         public string lastName { get; set; }
         [Display(Name ="Email")]
         public string email { get; set; }
+        [Display(Name = "Verlof")]
+        public string verlof { get; set; }
     }
 }
