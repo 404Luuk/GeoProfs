@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Geoprofs_v2.Models
 {
@@ -12,7 +13,12 @@ namespace Geoprofs_v2.Models
         public string lastName { get; set; }
         [Display(Name ="Email")]
         public string email { get; set; }
-        [Display(Name = "Verlof")]
-        public string verlof { get; set; }
+        [Display(Name = "StartVerlof")]
+        public DateTime startVerlof { get; set; }
+        [Display(Name = "EindVerlof")]
+        public DateTime eindVerlof { get; set; }
+        [Display(Name = "Status")]
+        public string status { get; set; }
+        
     }
 }
