@@ -1,0 +1,44 @@
+﻿@page
+@model Geoprofs_v2.Pages.Werknemers.Edit2Model
+
+@{
+    ViewData["Title"] = "Edit werknemer verlof aanvrag status";
+}
+
+<h1>Edit</h1>
+
+<h4>Werknemer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Werknemer.werknemer_id" />
+            <div class="form-group">
+                <label asp-for="Werknemer.status" class="control-label"></label>
+                <select asp-for="Werknemer.status" class="form-control">
+                    <option value="Approved">Approved</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+                <span asp-validation-for="Werknemer.status" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Werknemer.firstName" value="@Model.Werknemer.firstName" class="form-control" />
+            <input type="hidden" asp-for="Werknemer.lastName" value="@Model.Werknemer.lastName" class="form-control" />
+            <input type="hidden" asp-for="Werknemer.email" value="@Model.Werknemer.email" class="form-control" />
+            <input type="hidden" asp-for="Werknemer.startVerlof" value="@Model.Werknemer.startVerlof" class="form-control" />
+            <input type="hidden" asp-for="Werknemer.eindVerlof" value="@Model.Werknemer.eindVerlof" class="form-control" />
+            <input type="hidden" asp-for="Werknemer.verlofReden" value="@Model.Werknemer.verlofReden" class="form-control" />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Manager">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

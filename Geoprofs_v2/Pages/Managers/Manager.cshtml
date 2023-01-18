@@ -1,15 +1,10 @@
 ﻿@page
 @model Geoprofs_v2.Pages.Werknemers.IndexModel
-
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Verlof aanvragen goedkeuren of afkeuren";
 }
+<h1>@ViewData["Title"]</h1>
 
-<h1>Werknemer verlof aanvraag</h1>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -62,8 +57,7 @@
                     @Html.DisplayFor(modelItem => item.status)
                 </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.werknemer_id">Edit</a> |
-                <a asp-page="./Delete" asp-route-id="@item.werknemer_id">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.werknemer_id">Edit</a>
             </td>
         </tr>
 }

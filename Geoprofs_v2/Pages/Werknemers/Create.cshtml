@@ -7,7 +7,7 @@
 
 <h1>Create</h1>
 
-<h4>Werknemer</h4>
+<h4>Werknemer verlof</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -29,11 +29,28 @@
                 <span asp-validation-for="Werknemer.email" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Werknemer.startVerlof" class="control-label"></label>
+                <input asp-for="Werknemer.startVerlof" class="form-control" />
+                <span asp-validation-for="Werknemer.startVerlof" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Werknemer.eindVerlof" class="control-label"></label>
+                <input asp-for="Werknemer.eindVerlof" class="form-control" />
+                <span asp-validation-for="Werknemer.eindVerlof" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="Werknemer.verlofReden" class="control-label"></label>
+                <input asp-for="Werknemer.verlofReden" class="form-control" />
+                <span asp-validation-for="Werknemer.verlofReden" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Werknemer.status" value="Pending" class="form-control" />         
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
+
 
 <div>
     <a asp-page="Index">Back to List</a>
