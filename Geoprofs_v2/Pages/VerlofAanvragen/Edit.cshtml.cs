@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using GeoProfs.Data;
 using Geoprofs_v2.Models;
 
-namespace Geoprofs_v2.Pages.Werknemers
+namespace Geoprofs_v2.Pages.VerlofAanvragen
 {
     public class EditModel : PageModel
     {
@@ -21,7 +21,7 @@ namespace Geoprofs_v2.Pages.Werknemers
         }
 
         [BindProperty]
-        public Werknemer Werknemer { get; set; }
+        public VerlofAanvraag VerlofAanvraag { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,9 +30,9 @@ namespace Geoprofs_v2.Pages.Werknemers
                 return NotFound();
             }
 
-            Werknemer = await _context.Werknemers.FirstOrDefaultAsync(m => m.id == id);
+            VerlofAanvraag = await _context.VerlofAanvraag.FirstOrDefaultAsync(m => m.verlof_id == id);
 
-            if (Werknemer == null)
+            if (VerlofAanvraag == null)
             {
                 return NotFound();
             }
@@ -48,7 +48,7 @@ namespace Geoprofs_v2.Pages.Werknemers
                 return Page();
             }
 
-            _context.Attach(Werknemer).State = EntityState.Modified;
+            _context.Attach(VerlofAanvraag).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +56,7 @@ namespace Geoprofs_v2.Pages.Werknemers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!WerknemerExists(Werknemer.id))
+                if (!VerlofAanvraagExists(VerlofAanvraag.verlof_id))
                 {
                     return NotFound();
                 }
@@ -69,9 +69,9 @@ namespace Geoprofs_v2.Pages.Werknemers
             return RedirectToPage("./Index");
         }
 
-        private bool WerknemerExists(int id)
+        private bool VerlofAanvraagExists(int id)
         {
-            return _context.Werknemers.Any(e => e.id == id);
+            return _context.VerlofAanvraag.Any(e => e.verlof_id == id);
         }
     }
 }

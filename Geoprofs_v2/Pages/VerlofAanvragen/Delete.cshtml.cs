@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using GeoProfs.Data;
 using Geoprofs_v2.Models;
 
-namespace Geoprofs_v2.Pages.Werknemers
+namespace Geoprofs_v2.Pages.VerlofAanvragen
 {
     public class DeleteModel : PageModel
     {
@@ -20,7 +20,7 @@ namespace Geoprofs_v2.Pages.Werknemers
         }
 
         [BindProperty]
-        public Werknemer Werknemer { get; set; }
+        public VerlofAanvraag VerlofAanvraag { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,9 +29,9 @@ namespace Geoprofs_v2.Pages.Werknemers
                 return NotFound();
             }
 
-            Werknemer = await _context.Werknemers.FirstOrDefaultAsync(m => m.id == id);
+            VerlofAanvraag = await _context.VerlofAanvraag.FirstOrDefaultAsync(m => m.verlof_id == id);
 
-            if (Werknemer == null)
+            if (VerlofAanvraag == null)
             {
                 return NotFound();
             }
@@ -45,11 +45,11 @@ namespace Geoprofs_v2.Pages.Werknemers
                 return NotFound();
             }
 
-            Werknemer = await _context.Werknemers.FindAsync(id);
+            VerlofAanvraag = await _context.VerlofAanvraag.FindAsync(id);
 
-            if (Werknemer != null)
+            if (VerlofAanvraag != null)
             {
-                _context.Werknemers.Remove(Werknemer);
+                _context.VerlofAanvraag.Remove(VerlofAanvraag);
                 await _context.SaveChangesAsync();
             }
 

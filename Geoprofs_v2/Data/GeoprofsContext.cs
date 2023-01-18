@@ -37,6 +37,8 @@ namespace GeoProfs.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
         }
+
+        public DbSet<Geoprofs_v2.Models.VerlofAanvraag> VerlofAanvraag { get; set; }
     }
 }
 #endregion

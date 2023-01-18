@@ -1,0 +1,66 @@
+﻿@page
+@model Geoprofs_v2.Pages.VerlofAanvragen.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VerlofAanvraag[0].werknemer_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VerlofAanvraag[0].verlofReden)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VerlofAanvraag[0].startDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VerlofAanvraag[0].endDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VerlofAanvraag[0].description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VerlofAanvraag[0].verlofStatus)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.VerlofAanvraag) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.werknemer_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.verlofReden)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.startDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.endDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.verlofStatus)
+            </td>
+            <td>
+               @* <a asp-page="./Edit" asp-route-id="@item.verlof_id">Edit</a> |*@
+                <a asp-page="./Details" asp-route-id="@item.verlof_id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.verlof_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
