@@ -1,0 +1,55 @@
+﻿@page
+@model Geoprofs_v2.Pages.VerlofAanvragen.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>VerlofAanvraag</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VerlofAanvraag.werknemer_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VerlofAanvraag.werknemer_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VerlofAanvraag.verlofReden)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VerlofAanvraag.verlofReden)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VerlofAanvraag.startDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VerlofAanvraag.startDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VerlofAanvraag.endDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VerlofAanvraag.endDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VerlofAanvraag.description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VerlofAanvraag.description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VerlofAanvraag.verlofStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VerlofAanvraag.verlofStatus)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.VerlofAanvraag.verlof_id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
