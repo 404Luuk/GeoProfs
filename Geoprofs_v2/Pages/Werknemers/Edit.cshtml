@@ -40,6 +40,12 @@
                 <span asp-validation-for="Werknemer.eindVerlof" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Werknemer.verlofReden" class="control-label"></label>
+                <input asp-for="Werknemer.verlofReden" class="form-control" />
+                <span asp-validation-for="Werknemer.verlofReden" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Werknemer.status" value="Pending" class="form-control" />
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>

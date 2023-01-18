@@ -5,11 +5,6 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Blablablabla.</p>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -27,6 +22,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Werknemer[0].eindVerlof)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Werknemer[0].verlofReden)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Werknemer[0].status)
@@ -53,12 +51,13 @@
                     @Html.DisplayFor(modelItem => item.eindVerlof)
                 </td>
                 <td>
+                    @Html.DisplayFor(modelItem => item.verlofReden)
+                </td>
+                <td>
                     @Html.DisplayFor(modelItem => item.status)
                 </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.werknemer_id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.werknemer_id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.werknemer_id">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.werknemer_id">Edit</a>
             </td>
         </tr>
 }

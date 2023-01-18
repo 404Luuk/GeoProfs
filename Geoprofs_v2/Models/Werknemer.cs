@@ -13,10 +13,12 @@ namespace Geoprofs_v2.Models
         public string lastName { get; set; }
         [Display(Name ="Email")]
         public string email { get; set; }
-        [Display(Name = "StartVerlof")]
+        [Display(Name = "Start Verlof")]
         public DateTime startVerlof { get; set; }
-        [Display(Name = "EindVerlof")]
+        [Display(Name = "Eind Verlof")]
         public DateTime eindVerlof { get; set; }
+        [Display(Name = "Verlof reden")]
+        public string verlofReden { get; set; }
         [Display(Name = "Status")]
         public string status { get; set; }
         
