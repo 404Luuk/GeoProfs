@@ -14,15 +14,7 @@ namespace Geoprofs_v2.Models
         [Display(Name ="Email")]
         public string email { get; set; }
 
-
-        // Department foreign key
-        [ForeignKey("Department")]
         public int departmentId { get; set; }
-        public virtual Department Department { get; set; }
-
-        // Role foreign key
-        [ForeignKey("Role")]
         public int roleId { get; set; }
-        public virtual Role Role { get; set; } 
     }
 }
