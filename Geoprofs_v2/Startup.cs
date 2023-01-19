@@ -26,12 +26,13 @@ namespace Geoprofs_v2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<GeoprofsContext>(options =>
+              options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDatabaseDeveloperPageExceptionFilter();
+
             services.AddRazorPages();
 
-            var cnn = new SqliteConnection("Filename=:memory:");
-            cnn.Open();
-            services.AddDbContext
-            <GeoprofsContext>(o => o.UseSqlite(cnn)); ;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +48,7 @@ namespace Geoprofs_v2
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

@@ -23,11 +23,7 @@ namespace Geoprofs_v2.Models
     {
         [Key]
         public int verlof_id { get; set; }
-
-        [ForeignKey("Werknemer")]
         public int werknemer_id { get; set; }
-
-        [ForeignKey("VerlofReden")]
         public reden verlofReden { get; set; }
 
         public DateTime startDate { get; set; }
